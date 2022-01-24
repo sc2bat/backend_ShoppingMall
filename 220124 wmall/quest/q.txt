@@ -1,0 +1,6 @@
+상품 카테고리로 이동시 dao
+
+String sql = "SELECT * FROM wproduct WHERE kind=?";
+pstmt.setString(1, kind);
+
+스트링 값을 넣으면 웹에 출력이 안되고 integer 로 형변환 하면 출력됩니다
