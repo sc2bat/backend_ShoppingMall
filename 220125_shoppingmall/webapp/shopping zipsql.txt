@@ -1,0 +1,9 @@
+shop zip sql
+
+cmd
+
+sqlplus
+
+scott tiger
+
+@D:\study_java\workspace\WEB12_ShoppingMall\src\main\webapp\zip.sql
