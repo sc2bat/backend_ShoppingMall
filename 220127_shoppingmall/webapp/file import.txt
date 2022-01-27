@@ -1,0 +1,14 @@
+파일 import 하기
+
+프로젝트 삭제하면 서버에서도 삭제됨
+
+explorer 에서 우클릭 import
+혹은 file import 
+
+projects from folder or Archive
+
+경로 찾고 src 가 보이는 곳까지 경로
+
+import 후 서버 연결이 안되어있다면 파일 실행여부를 떠나 한번 run 시키고
+파일 설정 1.8 서버 체크
+

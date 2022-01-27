@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>findIdconfirmNumber</title>
+<link rel="stylesheet" href="css/shopping.css">
+</head>
+<body>
+<h2>ID 찾기</h2>
+<form method="post" name="frm" action="shop.do">
+	<input type="hidden" name="command" value="findIdStep2">
+	<table align="center" bgcolor="black" cellspacing="1" width="400">
+		<tr align="center" bgcolor="#FDE8FF">
+			<td width="430" bgcolor="#FDE8FF">
+				<h3>성명 : ${name }</h3>
+				<input type="hidden" name="name" value="${name }">
+			</td>
+			<td width="430" bgcolor="#FDE8FF">
+				<h3>전화번호 : ${phone }</h3>
+				<input type="hidden" name="phone" value="${phone }">
+				<input type="hidden" name="id" value="${MemberVO.id }">
+			</td>
+			<td width="430" bgcolor="#FDE8FF">
+				<h3>인증번호<input type="text" name="confirmNum"></h3>전송받은 번호를 입력하세요 <br>
+				${msg } <br><input type="submit" value="인증번호확인">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
