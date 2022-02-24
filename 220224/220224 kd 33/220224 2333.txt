@@ -1,0 +1,25 @@
+회원탈퇴 팝업창
+
+sub_menu.jsp
+
+회원탈퇴부분 수정
+<li><a href="#" onClick="confirmOfDelete()">회원 탈퇴</a></li>
+
+mypage.js 추가
+
+function confirmOfDelete(){
+	if(confirm("정말로 탈퇴하시겠습니까?")){
+		location.href="bs.do?cmd=withdrawal";
+	}else{
+		return false;
+	}
+}
+
+nOrderResult.jsp
+수정
+<div id="buttons">
+		<input type="button" value="홈으로" class="submit" onclick="location.href='bs.do?cmd=index'" style="border:1px solid #C6C6C6; margin-top:10px; width:150px; height:25px; border-radius:5px; border-radius:5px;">
+		<input type="button" value="주문/배송 조회" onClick="location.href='bs.do?cmd=loginForm'" style=" border:1px solid #C6C6C6; margin-top:10px; width:150px; height:25px; border-radius:5px; border-radius:5px;">
+	</div>
+
+

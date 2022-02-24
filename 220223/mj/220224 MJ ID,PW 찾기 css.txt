@@ -1,0 +1,87 @@
+※ css 변경점
+
+#findMain{position:relative; width:100%; height:auto; text-align:center;}
+
+.findMain1{position:relative; width:960px; height:auto; display:inline-block; margin:60px 0; background:white; border: 2px solid #d8d8d8}
+
+.method{height:50px; line-height:50px; background:#fcf9f2; border:1px solid #6699cc; font-weight:bold; font-size:16px;}
+
+.inputbox{position:relative; height:1px; padding:0 0 10px 0; background:#f8f8f8; visibility:hidden; border-top:1px solid #6699cc; border-bottom:1px solid #6699cc;}
+
+#sideButton .sideButton1{position:relative; float:left; width:116px; height:36px; border:none;
+line-height:40px; font-size:16px; border: 2px solid #d8d8d8;}
+
+.sideButton1 a{text-decoration:none; text-decoration-line:none; color: inherit; font-weight:bold;}		<- css 추가!
+
+
+
+※ jsp 변경점
+findId.jsp, findPwd.jsp 복붙하시면 됩니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

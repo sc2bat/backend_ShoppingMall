@@ -1,0 +1,13 @@
+member.js
+
+function findOd_pass() 추가
+function Od_passCheck() 추가
+function Od_passResult() 추가
+
+FindNMOd_passAction action 폴ㄷ
+
+findNMOd_pass.jsp member 폴더에 
+
+ActionFactory에
+
+		else if( cmd.equals("findNMOd_pass")) { ac = new FindNMOd_passAction();} 추가

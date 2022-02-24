@@ -1,0 +1,3 @@
+/* cartbutton */
+.cartbtn{position:fixed; top:540px; background:url('../images/cart.png') no-repeat; background-size: contain; width:60px; height:60px;}
+.x{position:fixed; top:600px; background:url('../images/top.png') no-repeat; background-size: contain; width:60px; height:60px;}

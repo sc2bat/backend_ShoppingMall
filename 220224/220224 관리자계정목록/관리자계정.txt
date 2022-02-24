@@ -1,0 +1,37 @@
+AdminDao getAllWorker() 추가
+
+public ArrayList<AdminVO> getAllWorker() {
+		ArrayList<AdminVO> list = new ArrayList<AdminVO>();
+		String sql = "SELECT * FROM worker";
+		con = Dbm.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while( rs.next() ) {
+				AdminVO avo = new AdminVO();
+				avo = new AdminVO();
+				avo.setId( rs.getString("id") );
+				avo.setPwd(rs.getString("pwd"));
+				avo.setName(rs.getString("name"));
+				avo.setPhone(rs.getString("phone"));
+				list.add(avo);
+			}
+		} catch (SQLException e) { e.printStackTrace();
+		} finally { Dbm.close(con, pstmt, rs);
+		}
+		return list;
+	}
+	
+	
+ActionFactory
+
+// 220224
+		else if(cmd.equals("adminWorkerList"))ac = new AdminWorkerListAction();추가
+	
+adminFooter.jsp
+
+관리자 계정관리 href
+<li><a href="bs.do?cmd=adminWorkerList">관리자계정관리</a></li> 로 수정
+
+
+admin/member/admin_WorkerList.jsp 경로로 복붙

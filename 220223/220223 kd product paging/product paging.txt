@@ -1,0 +1,9 @@
+ProSideAction
+
+if(sub!=null && sub.equals("y")) { 밑에
+
+session.removeAttribute("kind"); 추가됨
+
+SearchingAction 
+
+ getProductCount -> getSearchingCount 로 변경

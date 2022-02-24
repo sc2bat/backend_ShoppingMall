@@ -1,0 +1,21 @@
+220224 MJ 상품 카트에 넣기 및 기타등등
+
+
+
+bestProduct.jsp, newProduct.jsp, globalProduct.jsp, localProduct.jsp
+
+1. 상세보기, 장바구니 바로구매 버튼 기능 연결 및 구매여부 팝업창 띄우기
+
+2. 우하단 '상단으로 가기' 버튼 추가 및 위치 조정
+
+/* cartbutton */
+.cartbtn{position:fixed; top:540px; background:url('../images/cart.png') no-repeat; background-size: contain; width:60px; height:60px;}
+.x{position:fixed; top:600px; background:url('../images/top.png') no-repeat; background-size: contain; width:60px; height:60px;}
+
+
+
+
+
+※ viewProduct.jsp의 상품 여럿 넣기 수정
+
+viewProduct.jsp 수정

@@ -1,0 +1,9 @@
+220224 admin 주문목록
+
+
+adminOrderList.jsp, adminNOrderList.jsp 각각 ID, 구매자 이름 추가
+
+admin_script.js에 orderChange 함수 추가
+
+
+
