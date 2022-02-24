@@ -1,0 +1,58 @@
+bookproduct 테이블 byear String 으로 변경
+
+DROP TABLE bookproduct CASCADE constraints;
+CREATE TABLE bookproduct(
+	bseq NUMBER(5) NOT NULL PRIMARY KEY,
+	bname VARCHAR2(100) NOT NULL,	
+	writer VARCHAR2(100), 
+	publisher VARCHAR2(100), 
+	byear VARCHAR2(40),
+	price NUMBER(10),
+	content VARCHAR2(4000),	
+	kind CHAR(1),	
+	genre VARCHAR2(60), 
+	image VARCHAR2(50),	
+	useyn CHAR(1) DEFAULT 'y',  
+	bestyn CHAR(1) DEFAULT 'n',
+	indate DATE DEFAULT sysdate 
+);
+SELECT * FROM bookproduct;
+
+DROP SEQUENCE bookproduct_seq;
+CREATE SEQUENCE bookproduct_seq INCREMENT BY 1 START WITH 1 NOCACHE;
+SELECT bookproduct_seq.currVal, bookproduct_seq.nextVal FROM dual;
+
+-- 220218 review indate 추가
+DROP TABLE review CASCADE constraints;
+CREATE TABLE review (
+	rseq NUMBER(5) NOT NULL PRIMARY KEY,
+	bseq NUMBER(5) NOT NULL REFERENCES bookproduct(bseq),
+	id VARCHAR2(20) NOT NULL REFERENCES member(id),
+	content VARCHAR2(1000),
+	score  CHAR(1) DEFAULT '3',
+	indate DATE DEFAULT sysdate 
+);
+SELECT * FROM review;
+
+bookproduct_final.sql 값 넣기
+
+productVO 변경
+
+productDao setByear(rs.getString("byear") 로 변경
+
+ProductDetailAction.java 변경
+
+reivewDao 리뷰 평균 카운트 추가
+
+ProsideAtion.java 상품카운팅
+paging 처리 
+
+페이징 추가완료
+localProduct
+globalProduct
+viewProduct
+
+product_left 필드내용에 맞게 수정
+
+header.jsp 국내도서 외국도서 kind 값 변경
+
