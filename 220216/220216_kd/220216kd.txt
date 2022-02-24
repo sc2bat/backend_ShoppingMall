@@ -1,0 +1,96 @@
+ProductDetail
+
+ActionFactory.java
+		
+// productDetail
+else if(cmd.equals("productDetail")) ac = new ProductDetailAction();
+
+ProductDetailAction 작동안되면 링크걸려있는 a태그에 
+href="bs.do?cmd=productDetail&bseq=${productVO.bseq}" 넣어주세여
+
+book.css
+
+/* productDetail css 220216 */
+.detailbox{position:relative; float:left; width:700px; /* border:1px solid black; */}
+
+.pdLeft{position:relative; float:left;width:198px; height:300px; border:1px solid black; overflow:hidden;}
+.pdRight{position:relative; float:left;width:300px; height:300px; margin-left:30px; }
+.pdRightList {position:relative;height:43px;line-height:43px;/*  border:1px solid black;  */}
+.pdRightList div {position:relative;float:left;}
+
+.pdbott{position:relative; float:left;width:700px; /* border:1px solid black; */}
+.pdbott>ol{list-style:none; /* border:1px solid black; */ padding:0px; }
+
+.pdbott>ol>li>a{position:relative; float:left; width:230px;  background-color:green; color: white;
+border:1px solid black; margin:0 auto; padding:10px 0 10px 0; text-decoration:none; text-align:center;}
+.pdbott>ol>li>a:hover{text-decoration:underline; font-weight:bold;}
+
+ .pdcontent{padding:50px 0px 20px 20px;}
+
+#radio_score>input{float:left; margin:0 2px 0 2px;}
+.starimg{float:left;width:14px; height:14px; background-image:url(../images/main/ico_star.png); 
+background-position:0px -20px; overflow:hidden; line-height:20px;}
+
+#review_content{outline: none;resize: none;background:none;}
+
+.pd_review_btn{padding:37px 30px 38px 30px; background-color:green; color:white;
+text-decoration:none;position:relative;float:right; margin-right:30px;}
+.pd_review_btn:hover{text-decoration:underline; font-weight:bold;}
+
+/* productDetail reviewbox 220216 */
+#reviewbox>ul{list-style:none; margin:10px; }
+#reviewbox>ul>li{float:left;}
+#reviewbox>textarea{padding:10px 20px 10px 60px; resize: none;outline: none; border:0px;}
+.pdto_login{padding:10px 20px 10px 20px; background-color:green; color:white;
+border:1px solid black; margin-right:30px;float:right;}
+.pdto_login:hover{text-decoration:underline;}
+
+
+productDetail.jsp
+
+ProductDetailAction.java
+
+ReviewVO
+ReviewDao
+
+sql\table_insert_sql.sql
+
+
+-- 220216 review test insert
+-- 리뷰 출력 테스트용 insert 필요에따라 bseq 조정해주세여
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 1);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 3);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 4);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 5);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 2);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 1);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 2);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 3);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 4);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 4);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 5);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 5);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 4);
+INSERT INTO review(rseq, bseq, id, content, score)
+	VALUES(review_seq.nextVal, 125, 'one', '대충 감상평', 3);
+	
+	
+header.jsp
+script 부분에
+
+<script src="product/product.js"></script>
+추가해주세요
+
