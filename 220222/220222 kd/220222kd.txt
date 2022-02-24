@@ -1,0 +1,80 @@
+220222 kd
+
+ActionFactory
+
+
+// 220222
+else if(cmd.equals("adminProductUpdateBestyn"))ac = new AdminProductUpdateBestynAction();
+else if(cmd.equals("adminMemberList"))ac = new AdminMemberListAction();
+else if(cmd.equals("adminMemberUseNList"))ac = new AdminMemberUseNListAction();
+else if(cmd.equals("adminMemberUpdateUseyn"))ac = new AdminMemberUpdateUseynAction();
+else if(cmd.equals("adminMemberUpdateForm"))ac = new AdminMemberUpdateFormAction();
+else if(cmd.equals("adminMemberUpdate"))ac = new AdminMemberUpdateAction();
+
+admin_action
+AdminProductListAction
+AdminProductDetailAction
+AdminProductUpdateFormAction
+AdminProductUpdateAction
+AdminProductUploadFormAction
+AdminProductUploadAction
+AdminProductBestListAction
+AdminProductDeleteAction
+AdminProductUpdateBestynAction
+AdminMemberListAction
+AdminMemberUseNListAction
+AdminMemberUpdateUseynAction
+AdminMemberUpdateFormAction
+AdminMemberUpdateAction
+
+
+script/ admin_script
+
+/* 220222 admin member */
+
+function go_member_update(id){
+	if(document.form.name.value == ""){
+		alert("이름 미입력");
+		document.form.name.focus();
+	}else if(document.form.pwd.value == ""){
+		alert("비밀번호 미입력");
+		document.form.pwd.focus();
+	}else if(document.form.pwd.value != document.form.pwd_re.value){
+		alert("비밀번호가 다름");
+		document.form.pwd_re.focus();
+	}else if(document.form.email.value == ""){
+		alert("이메일 미입력");
+		document.form.email.focus();
+	}else if(document.form.phone.value == ""){
+		alert("전화번호 미입력");
+		document.form.phone.focus();
+	}else if(document.form.zip_num.value == ""){
+		alert("지번 미입력");
+		document.form.zip_num.focus();
+	}else if(document.form.address.value == ""){
+		alert("주소 미입력");
+		document.form.address.focus();
+	}else{
+		if(confirm("수정하시겠습니까?")){
+			document.form.action = "bs.do?cmd=adminMemberUpdate&id=" + id;
+			document.form.submit();
+		}
+	}
+}
+
+function go_member_useyn(id){
+	location.href = "bs.do?cmd=adminMemberUpdateUseyn&id=" + id;
+}
+
+function go_product_bestyn(bseq){
+	location.href = "bs.do?cmd=adminProductUpdateBestyn&bseq=" + bseq;
+}
+
+
+adminMain.jsp
+<label>회원수<a href="bs.do?cmd=adminMemberList&sub=y">Edit</a></label>
+<label>상품수<a href="bs.do?cmd=adminProductList&sub=y">Edit</a></label>
+
+
+
+

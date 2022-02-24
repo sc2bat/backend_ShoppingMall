@@ -1,0 +1,5 @@
+/*notice*/
+else if(cmd.equals("adminNoticeList")) ac = new AdminNoticeListAction();
+		else if(cmd.equals("adminNoticeDetail")) ac = new AdminNoticeDetailAction();
+		else if(cmd.equals("adminNoticeWrite")) ac = new AdminNoticeWriteAction();
+		else if(cmd.equals("adminNoticeWriteForm")) ac = new AdminNoticeWriteFormAction();

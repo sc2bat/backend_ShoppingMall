@@ -1,0 +1,57 @@
+220222 MJ 변경점
+
+
+※ 장바구니 css 추가작업
+
+cartList.jsp 변경
+css에 /* 장바구니 css 추가작업 */ 부분 추가
+
+/* 장바구니 css 추가작업 */
+#cartbtn2{margin:10px 0;}
+#cartbtn2 .cancel{height: 30px;	width: 100px;  border: 1px solid #43A22F; border-radius: 5px; 
+font-size: 14px; background-repeat: repeat-x; background-position: center center; color: #fff; background-color:#43A22F; margin: 0 0 0 20px; }
+#cartbtn2 .submit{height: 30px;	width: 100px;  border: 1px solid #fff; border-radius: 5px; 
+font-size: 14px; background-repeat: repeat-x; background-position: center center; color: black; background-color:#fff; margin: 0 0 0 20px;}
+
+#cartList a:link, #cartList a:visited{color:black;}
+#cartList a:hover{color:#F90; transition-duration:1s;}
+
+
+
+※ 회원탈퇴 기능 추가
+
+cmd // withdrawal(회원탈퇴) 추가
+action 패키지에 WithdrawalAction.java 추가
+MemberDao.java에 withdrawal 메소드 추가
+mypage 폴더에 withdrawal.jsp 추가
+
+css에 /* withdrawal */ 추가
+/* withdrawal */
+#joinInfoFlex{position:relative; width:800px; height:auto; display:flex; justify-content:center; align-items:center;
+flex-wrap: nowrap; text-align: center;}
+.withdrawalbtn{height: 50px; width: 150px; border: 1px solid #43A22F; border-radius: 5px; 
+font-size: 14px; background-repeat: repeat-x; background-position: center center; color: #fff; background-color:#43A22F;}
+
+
+
+※ 추가 보수작업
+
+1. header에 <input type="hidden" id="checking" value="${loginUser.id}"> 두줄 추가
+(바로 구매하기 버튼 활성화를 위해 필요)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
